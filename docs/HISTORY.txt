@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.0 - (2022-03-18)
+---------------------------
+* Change: Add EEA supported languages [avoinea]
+
 1.0-dev0 - (unreleased)
 -----------------------
 
