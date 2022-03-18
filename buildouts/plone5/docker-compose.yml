@@ -1,0 +1,11 @@
+version: "2"
+services:
+  plone:
+    image: plone:5
+    ports:
+    - "8080"
+    volumes:
+    - ../../:/plone/instance/src/eea.website.policy
+    environment:
+      ADDONS: "eea.website.policy[test]"
+      DEVELOP: "src/eea.website.policy"
