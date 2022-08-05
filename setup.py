@@ -42,6 +42,10 @@ setup(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
+        'eea.kitkat',
+        'eea.dexterity.indicators',
+        'eea.dexterity.themes',
+        'eea.progress.workflow',
     ],
     extras_require={
         'test': [

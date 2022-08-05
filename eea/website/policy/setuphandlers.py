@@ -13,6 +13,7 @@ class HiddenProfiles(object):
         """ Hide uninstall profile from site-creation and quickinstaller.
         """
         return [
+            'eea.website.policy:languages',
             'eea.website.policy:uninstall',
         ]
 

@@ -16,6 +16,15 @@
       />
 
   <genericsetup:registerProfile
+      name="languages"
+      title="eea.website.policy (avaliable languages)"
+      directory="profiles/languages"
+      description="Installs the eea.website.policy avaliable languages"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
       name="uninstall"
       title="eea.website.policy (uninstall)"
       directory="profiles/uninstall"

@@ -3,6 +3,7 @@ Changelog
 
 1.1-dev0 - (unreleased)
 ---------------------------
+* Feature: Persist demo-www profile and auto-install dependency profiles [avoinea]
 
 1.0 - (2022-03-18)
 ---------------------------
