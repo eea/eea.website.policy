@@ -42,10 +42,17 @@ setup(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
+        'eea.kitkat',
+        'eea.dexterity.indicators',
+        'eea.dexterity.themes',
+        'eea.progress.workflow',
     ],
     extras_require={
         'test': [
+            "plone.app.contenttypes",
             'plone.app.testing',
+            "plone.testing",
+            "zope.testrunner",
         ],
     },
     entry_points="""

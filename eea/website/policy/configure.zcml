@@ -5,6 +5,11 @@
 
   <i18n:registerTranslations directory="locales" />
 
+  <include package="eea.kitkat" />
+  <include package="eea.dexterity.indicators" />
+  <include package="eea.dexterity.themes" />
+  <include package="eea.progress.workflow" />
+
   <include file="profiles.zcml" />
   <include package=".browser" />
   <include package=".upgrades" />

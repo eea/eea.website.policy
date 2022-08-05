@@ -17,6 +17,11 @@ class EEAFixture(PloneSandboxLayer):
         """
         import eea.website.policy
         self.loadZCML(package=eea.website.policy)
+
+        z2.installProduct(app, 'eea.kitkat')
+        z2.installProduct(app, 'eea.dexterity.indicators')
+        z2.installProduct(app, 'eea.dexterity.themes')
+        z2.installProduct(app, 'eea.progress.workflow')
         z2.installProduct(app, 'eea.website.policy')
 
     def setUpPloneSite(self, portal):
@@ -45,6 +50,10 @@ class EEAFixture(PloneSandboxLayer):
     def tearDownZope(self, app):
         """ Uninstall Zope
         """
+        z2.uninstallProduct(app, 'eea.kitkat')
+        z2.uninstallProduct(app, 'eea.dexterity.indicators')
+        z2.uninstallProduct(app, 'eea.dexterity.themes')
+        z2.uninstallProduct(app, 'eea.progress.workflow')
         z2.uninstallProduct(app, 'eea.website.policy')
 
 EEAFIXTURE = EEAFixture()
