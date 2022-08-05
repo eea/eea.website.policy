@@ -88,14 +88,14 @@ pipeline {
             }
           },
 
-          "Plone 6": {
-            node(label: 'docker') {
-              script {
-                checkout scm
-                sh '''docker run -i --rm --name="$BUILD_TAG-plone6" -v $(pwd):/app/src/$GIT_NAME -e ADDONS="/app/src/$GIT_NAME[test]" -e DEVELOP="/app/src/$GIT_NAME" eeacms/eea-website-backend bin/zope-testrunner --auto-color --auto-progress --test-path /app/src/$GIT_NAME'''
-              }
-            }
-          }
+          // "Plone 6": {
+          //   node(label: 'docker') {
+          //     script {
+          //       checkout scm
+          //       sh '''docker run -i --rm --name="$BUILD_TAG-plone6" -v $(pwd):/app/src/$GIT_NAME -e ADDONS="/app/src/$GIT_NAME[test]" -e DEVELOP="/app/src/$GIT_NAME" eeacms/eea-website-backend bin/zope-testrunner --auto-color --auto-progress --test-path /app/src/$GIT_NAME'''
+          //     }
+          //   }
+          // }
         )
       }
     }
