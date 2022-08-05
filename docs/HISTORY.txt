@@ -3,6 +3,7 @@ Changelog
 
 1.2-dev0 - (unreleased)
 ---------------------------
+* Feature: Add blocks layout to Folder ctype [avoinea]
 
 1.1 - (2022-08-05)
 ---------------------------
