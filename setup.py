@@ -49,7 +49,10 @@ setup(
     ],
     extras_require={
         'test': [
+            "plone.app.contenttypes",
             'plone.app.testing',
+            "plone.testing",
+            "zope.testrunner",
         ],
     },
     entry_points="""
