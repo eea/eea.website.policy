@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2-dev0 - (unreleased)
+1.2 - (2022-08-11)
 ---------------------------
 * Feature: Add blocks layout to Folder ctype [avoinea]
 * Feature: Add homepage_inverse_view and homepage_view to LRF ctype [avoinea]
