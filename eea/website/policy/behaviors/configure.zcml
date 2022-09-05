@@ -1,0 +1,16 @@
+  <configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  i18n_domain="eea">
+
+  <!-- XXX: To be removed when https://github.com/plone/plone.restapi/pull/1477/files merged and released -->
+  <plone:behavior
+    name="volto.blocks.editable.layout"
+    title="Blocks (Editable Layout)"
+    description="Enables Volto Blocks (editable layout) support"
+    provides=".interfaces.IBlocksEditableLayout"
+    />
+
+</configure>

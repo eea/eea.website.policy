@@ -11,6 +11,7 @@
   <include package="eea.progress.workflow" />
 
   <include file="profiles.zcml" />
+  <include package=".behaviors" />
   <include package=".browser" />
   <include package=".upgrades" />
 
