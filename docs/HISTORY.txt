@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.0 - (2022-11-14)
+---------------------------
+* Breaking: Remove TTW DX Layout marker interface - requires plone.restapi 8.32.0
+  [avoinea - refs #151856]
+
 1.3 - (2022-09-05)
 ---------------------------
 * Change: fix(layout): TTW DX Layout marker interface - refs #153858
