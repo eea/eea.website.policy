@@ -9,32 +9,9 @@
       </value_type>
     </field>
     <value>
-      <element>bg</element>
-      <element>cs</element>
-      <element>hr</element>
-      <element>da</element>
-      <element>nl</element>
-      <element>el</element>
       <element>en</element>
-      <element>et</element>
-      <element>fi</element>
-      <element>fr</element>
-      <element>de</element>
-      <element>hu</element>
-      <element>is</element>
       <element>it</element>
-      <element>lv</element>
-      <element>lt</element>
-      <element>mt</element>
-      <element>no</element>
-      <element>pl</element>
-      <element>pt</element>
       <element>ro</element>
-      <element>sk</element>
-      <element>sl</element>
-      <element>es</element>
-      <element>sv</element>
-      <element>tr</element>
     </value>
   </record>
 </registry>

@@ -46,6 +46,9 @@ setup(
         'eea.dexterity.indicators',
         'eea.dexterity.themes',
         'eea.progress.workflow',
+        'eea.progress.editing',
+        'eea.api.dataconnector',
+        'collective.volto.subsites',
     ],
     extras_require={
         'test': [
