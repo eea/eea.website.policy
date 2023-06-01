@@ -1,6 +1,14 @@
 Changelog
 =========
 
+3.0 - (2023-06-01)
+---------------------------
+* Change: Persist EEA WWW GenericSetup profile
+  [avoinea - refs #145772]
+* Feature: Add dependencies: 
+  eea.progress.editing, eea.api.dataconnector, collective.volto.subsites
+  [avoinea - refs #145772]
+
 2.0 - (2022-11-14)
 ---------------------------
 * Breaking: Remove TTW DX Layout marker interface - requires plone.restapi 8.32.0
