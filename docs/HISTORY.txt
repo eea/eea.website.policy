@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.1 - (2024-04-03)
+---------------------------
+* Change: dummy release
+  [alecghica]
+
 3.0 - (2023-06-01)
 ---------------------------
 * Change: Persist EEA WWW GenericSetup profile
