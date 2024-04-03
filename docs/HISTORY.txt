@@ -3,6 +3,8 @@ Changelog
 
 3.1-dev0 - (unreleased)
 ---------------------------
+* Change: dummy release
+  [alecghica]
 
 3.0 - (2023-06-01)
 ---------------------------
