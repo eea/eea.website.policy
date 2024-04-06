@@ -26,5 +26,17 @@
       />
 
   </genericsetup:upgradeSteps>
+    <genericsetup:upgradeSteps
+    source="2.6"
+    destination="2.7"
+    profile="eea.website.policy:default">
+
+    <genericsetup:upgradeStep
+      title="Upgrade Teaser Block to Grid Block"
+      handler="eea.website.policy.upgrades.upgrade_teaser_block.upgrade_teaser_block"
+      />
+
+  </genericsetup:upgradeSteps>
+
 
 </configure>
