@@ -1,10 +1,10 @@
-""" Upgrade teaserBlock to gridBlock 
-"""
+""" Upgrade teaserBlock to gridBlock """
 
 from Products.CMFCore.utils import getToolByName
 
 
 def convert_teaser_grid_to_grid_block(block_data):
+    "Convert block_data to gridBlock"
     grid_block = block_data.copy()
 
     grid_block["@type"] = "gridBlock"
@@ -25,7 +25,7 @@ def upgrade_teaser_block(context):
         # retrive block data from the item
         doc = brain.getObject()
         blocks = getattr(doc, "blocks", {})
-        if len(blocks.keys()) > 0:
+        if not blocks.keys():
             for key in blocks.keys():
                 # we have found a teaserGrid
                 if blocks[key]["@type"] == "teaserGrid":
