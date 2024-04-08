@@ -17,7 +17,7 @@ def convert_teaser_grid_to_grid_block(block_data):
 
 
 def upgrade_teaser_block(context):
-    """Fix Indicator schema"""
+    """Upgrade all teaserGrid blocks to gridBlock"""
     ctool = getToolByName(context, "portal_catalog")
     # create a list of all content from the site
     brains_docs = list(ctool.getAllBrains())
