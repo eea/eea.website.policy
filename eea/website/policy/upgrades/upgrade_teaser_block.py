@@ -9,7 +9,7 @@ def convert_teaser_grid_to_grid_block(block_data):
 
     grid_block["@type"] = "gridBlock"
     grid_block["blocks_layout"] = {
-        "items": list(map(lambda column: column["id"], block_data["columns"]))
+        "items": [column["id"] for column in block_data["columns"]]
     }
     grid_block["blocks"] = {x["id"]: x for x in block_data["columns"]}
     del grid_block["columns"]
