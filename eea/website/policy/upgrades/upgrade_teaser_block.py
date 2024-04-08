@@ -24,9 +24,10 @@ def upgrade_teaser_block(context):
     for brain in brains_docs:
         # retrive block data from the item
         doc = brain.getObject()
-        blocks = getattr(doc, "blocks", [])
-        for key in blocks.keys():
-            # we have found a teaserGrid
-            if blocks[key]["@type"] == "teaserGrid":
-                blocks[key] = convert_teaser_grid_to_grid_block(blocks[key])
-        doc.blocks = blocks
+        blocks = getattr(doc, "blocks", {})
+        if len(blocks.keys()) > 0:
+            for key in blocks.keys():
+                # we have found a teaserGrid
+                if blocks[key]["@type"] == "teaserGrid":
+                    blocks[key] = convert_teaser_grid_to_grid_block(blocks[key])
+            doc.blocks = blocks
