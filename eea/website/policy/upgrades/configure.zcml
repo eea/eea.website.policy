@@ -27,8 +27,8 @@
 
   </genericsetup:upgradeSteps>
     <genericsetup:upgradeSteps
-    source="2.6"
-    destination="2.7"
+    source="1.1"
+    destination="1.2"
     profile="eea.website.policy:default">
 
     <genericsetup:upgradeStep
