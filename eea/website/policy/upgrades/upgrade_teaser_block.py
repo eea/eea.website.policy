@@ -3,7 +3,7 @@
 from Products.CMFCore.utils import getToolByName
 
 
-def convert_teaser_grid_to_grid_block(block_data):
+def convert_teaser_to_grid_block(block_data):
     "Convert block_data to gridBlock"
     grid_block = block_data.copy()
 
@@ -29,5 +29,5 @@ def upgrade_teaser_block(context):
             for key in blocks.keys():
                 # we have found a teaserGrid
                 if blocks[key]["@type"] == "teaserGrid":
-                    blocks[key] = convert_teaser_grid_to_grid_block(blocks[key])
+                    blocks[key] = convert_teaser_to_grid_block(blocks[key])
             doc.blocks = blocks
