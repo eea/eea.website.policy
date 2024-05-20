@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.1-dev0 - (unreleased)
+---------------------------
+
 4.0 - (2024-05-20)
 ---------------------------
 * Change: Upgrade step to Volto 17 teaserGrid to gridBlock
