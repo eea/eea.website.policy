@@ -1,8 +1,10 @@
 Changelog
 =========
 
-3.2-dev0 - (unreleased)
+4.0 - (2024-05-20)
 ---------------------------
+* Change: Upgrade step to Volto 17 teaserGrid to gridBlock
+  [avoinea - refs #265726]
 
 3.1 - (2024-04-03)
 ---------------------------
