@@ -32,8 +32,8 @@ def upgrade_visualizations(portal):
         provider_url = viz.get("provider_url", None)
 
         if (
-            provider_url
-            and "resolveuid" in provider_url
+            provider_url and
+            "resolveuid" in provider_url
             and viz["provider_url"].startswith("../")
         ):
             viz["provider_url"] = viz["provider_url"][3:]
