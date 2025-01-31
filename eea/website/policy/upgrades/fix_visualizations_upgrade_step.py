@@ -1,11 +1,8 @@
 """Upgrade step to transform provider_url to resolve uid if the case"""
 
-from urllib.parse import urlparse
 import transaction
 from zope.lifecycleevent import modified
 from Products.ZCatalog.ProgressHandler import ZLogHandler
-from plone.restapi.deserializer.utils import path2uid
-import re
 
 
 def upgrade_visualizations(portal):
