@@ -13,6 +13,11 @@
       handler="eea.website.policy.upgrades.evolve40.migrate_teaser"
       />
 
+    <genericsetup:upgradeStep
+      title="Fix visualizations provider_urk"
+      handler="eea.website.policy.upgrades.fix_visualizations_upgrade_step.upgrade_visualizations"
+      />
+
   </genericsetup:upgradeSteps>
 
   <genericsetup:upgradeSteps
@@ -35,18 +40,6 @@
     <genericsetup:upgradeDepends
        title="Import all steps from eea.website.policy default profile"
        import_profile="eea.website.policy:default"
-      />
-
-  </genericsetup:upgradeSteps>
-
-  <genericsetup:upgradeSteps
-    source="4.0"
-    destination="4.1"
-    profile="eea.website.policy:default">
-
-    <genericsetup:upgradeStep
-      title="Fix visualizations provider_urk"
-      handler="eea.website.policy.upgrades.fix_visualizations_upgrade_step.upgrade_visualizations"
       />
 
   </genericsetup:upgradeSteps>

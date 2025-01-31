@@ -1,8 +1,11 @@
 """Upgrade step to transform provider_url to resolve uid if the case"""
 
+import os
+import logging
 import transaction
 from zope.lifecycleevent import modified
 from Products.ZCatalog.ProgressHandler import ZLogHandler
+logger = logging.getLogger("eea.website.policy")
 
 
 def upgrade_visualizations(portal):
@@ -31,12 +34,19 @@ def upgrade_visualizations(portal):
         if (
             provider_url and
             "resolveuid" in provider_url and
-            viz["provider_url"].startswith("../")
+            provider_url.startswith("../")
         ):
-            viz["provider_url"] = viz["provider_url"][3:]
-            obj.visualization = viz
-            modified(obj)
-            i += 1
+            path = os.path.join(obj.absolute_url(1), provider_url)
+            normpath = os.path.normpath(path)
+            if not normpath.startswith("www/en"):
+                provider_url = provider_url[3:]
+                logger.warning(
+                    "Fix visualization: %s. Normpath: %s. New provider_url: %s",
+                    obj.absolute_url(), normpath, provider_url)
+                viz["provider_url"] = provider_url
+                obj.visualization = viz
+                modified(obj)
+                i += 1
 
         if i % 100 == 0:
             transaction.commit()
