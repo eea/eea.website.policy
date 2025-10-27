@@ -9,7 +9,7 @@ logger = logging.getLogger("eea.website.policy")
 
 
 def add_latest_version_block(context):
-    """Add eea_latest_version block after page header in web_report objects.
+    """Add eea_latest_version block after page header in web_report.
 
     Adds the block:
     {
@@ -52,23 +52,30 @@ def add_latest_version_block(context):
         # Find the title block (page header)
         title_block_id = None
         for block_id, block_data in doc.blocks.items():
-            if isinstance(block_data, dict) and block_data.get("@type") == "title":
+            if (isinstance(block_data, dict) and
+                    block_data.get("@type") == "title"):
                 title_block_id = block_id
                 break
 
         if not title_block_id:
-            logger.warning(f"No title block found in {brain.getPath()}, skipping")
+            logger.warning(
+                f"No title block found in {brain.getPath()}, skipping"
+            )
             continue
 
         # Check if eea_latest_version block already exists
         has_latest_version = False
         for block_data in doc.blocks.values():
-            if isinstance(block_data, dict) and block_data.get("@type") == "eea_latest_version":
+            if (isinstance(block_data, dict) and
+                    block_data.get("@type") == "eea_latest_version"):
                 has_latest_version = True
                 break
 
         if has_latest_version:
-            logger.info(f"eea_latest_version block already exists in {brain.getPath()}, skipping")
+            logger.info(
+                f"eea_latest_version block already exists in "
+                f"{brain.getPath()}, skipping"
+            )
             continue
 
         # Generate a new UUID for this block
@@ -94,13 +101,17 @@ def add_latest_version_block(context):
                 # Insert after the title block
                 layout_items.insert(title_index + 1, new_block_id)
                 modified_count += 1
-                logger.info(f"Added eea_latest_version block to {brain.getPath()}")
+                logger.info(
+                    f"Added eea_latest_version block to "
+                    f"{brain.getPath()}"
+                )
             else:
                 logger.warning(
-                    f"Title block {title_block_id} not found in blocks_layout "
-                    f"for {brain.getPath()}, skipping"
+                    f"Title block {title_block_id} not found in "
+                    f"blocks_layout for {brain.getPath()}, skipping"
                 )
-                # Remove the block we just added since we can't place it correctly
+                # Remove the block we just added since we can't
+                # place it correctly
                 del doc.blocks[new_block_id]
                 continue
 
@@ -109,4 +120,7 @@ def add_latest_version_block(context):
         doc.reindexObject()
 
     pghandler.finish()
-    logger.info(f"Successfully added eea_latest_version block to {modified_count} web_report objects")
+    logger.info(
+        f"Successfully added eea_latest_version block to "
+        f"{modified_count} web_report objects"
+    )
