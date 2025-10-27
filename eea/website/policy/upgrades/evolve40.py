@@ -1,6 +1,5 @@
 """ Upgrade to version 2.0
 """
-# pylint: disable=line-too-long
 import logging
 from plone import api
 from zope.component import queryMultiAdapter
