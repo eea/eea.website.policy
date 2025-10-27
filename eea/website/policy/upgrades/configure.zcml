@@ -4,6 +4,18 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="4.0"
+    destination="5.0"
+    profile="eea.website.policy:default">
+
+    <genericsetup:upgradeStep
+      title="Add eea_latest_version block to web_report content type"
+      handler="eea.website.policy.upgrades.evolve50.add_latest_version_block"
+      />
+
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="1.1"
     destination="4.0"
     profile="eea.website.policy:default">
