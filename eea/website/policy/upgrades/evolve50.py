@@ -28,7 +28,9 @@ def add_latest_version_block(context):
         return
 
     pghandler = ZLogHandler(100)
-    pghandler.init("Add eea_latest_version block to web_report", len(brains))
+    pghandler.init(
+        "Add eea_latest_version block to web_report", len(brains)
+    )
 
     modified_count = 0
 
@@ -38,7 +40,9 @@ def add_latest_version_block(context):
         try:
             doc = brain.getObject()
         except Exception as e:
-            logger.warning(f"Could not get object {brain.getPath()}: {e}")
+            logger.warning(
+                f"Could not get object {brain.getPath()}: {e}"
+            )
             continue
 
         # Check if the document has blocks
