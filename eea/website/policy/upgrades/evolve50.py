@@ -41,7 +41,7 @@ def add_latest_version_block(context):
             doc = brain.getObject()
         except Exception as e:
             logger.warning(
-                f"Could not get object {brain.getPath()}: {e}"
+                "Could not get object %s: %s", brain.getPath(), e
             )
             continue
 
@@ -63,7 +63,7 @@ def add_latest_version_block(context):
 
         if not title_block_id:
             logger.warning(
-                f"No title block found in {brain.getPath()}, skipping"
+                "No title block found in %s, skipping", brain.getPath()
             )
             continue
 
@@ -77,8 +77,8 @@ def add_latest_version_block(context):
 
         if has_latest_version:
             logger.info(
-                f"eea_latest_version block already exists in "
-                f"{brain.getPath()}, skipping"
+                "eea_latest_version block already exists in %s, skipping",
+                brain.getPath()
             )
             continue
 
@@ -106,13 +106,13 @@ def add_latest_version_block(context):
                 layout_items.insert(title_index + 1, new_block_id)
                 modified_count += 1
                 logger.info(
-                    f"Added eea_latest_version block to "
-                    f"{brain.getPath()}"
+                    "Added eea_latest_version block to %s",
+                    brain.getPath()
                 )
             else:
                 logger.warning(
-                    f"Title block {title_block_id} not found in "
-                    f"blocks_layout for {brain.getPath()}, skipping"
+                    "Title block %s not found in blocks_layout for %s",
+                    title_block_id, brain.getPath()
                 )
                 # Remove the block we just added since we can't
                 # place it correctly
@@ -125,6 +125,6 @@ def add_latest_version_block(context):
 
     pghandler.finish()
     logger.info(
-        f"Successfully added eea_latest_version block to "
-        f"{modified_count} web_report objects"
+        "Successfully added eea_latest_version block to %s web_report "
+        "objects", modified_count
     )
