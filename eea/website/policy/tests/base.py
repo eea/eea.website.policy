@@ -1,6 +1,5 @@
 """Base test cases"""
 
-from Products.CMFPlone import setuphandlers
 from plone.testing import z2
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import PloneSandboxLayer
