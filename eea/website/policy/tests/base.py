@@ -35,13 +35,6 @@ class EEAFixture(PloneSandboxLayer):
         # Login as manager
         setRoles(portal, TEST_USER_ID, ["Manager"])
 
-        # Add default Plone content
-        try:
-            applyProfile(portal, "plone.app.contenttypes:plone-content")
-        except KeyError:
-            # BBB Plone 4
-            setuphandlers.setupPortalContent(portal)
-
         # Create testing environment
         portal.invokeFactory("Folder", "sandbox", title="Sandbox")
 
