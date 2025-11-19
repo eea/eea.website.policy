@@ -28,9 +28,7 @@ def add_latest_version_block(context):
         return
 
     pghandler = ZLogHandler(100)
-    pghandler.init(
-        "Add eea_latest_version block to web_report", len(brains)
-    )
+    pghandler.init("Add eea_latest_version block to web_report", len(brains))
 
     modified_count = 0
 
@@ -40,9 +38,7 @@ def add_latest_version_block(context):
         try:
             doc = brain.getObject()
         except Exception as e:
-            logger.warning(
-                "Could not get object %s: %s", brain.getPath(), e
-            )
+            logger.warning("Could not get object %s: %s", brain.getPath(), e)
             continue
 
         # Check if the document has blocks
@@ -56,29 +52,28 @@ def add_latest_version_block(context):
         # Find the title block (page header)
         title_block_id = None
         for block_id, block_data in doc.blocks.items():
-            if (isinstance(block_data, dict) and
-                    block_data.get("@type") == "title"):
+            if isinstance(block_data, dict) and block_data.get("@type") == "title":
                 title_block_id = block_id
                 break
 
         if not title_block_id:
-            logger.warning(
-                "No title block found in %s, skipping", brain.getPath()
-            )
+            logger.warning("No title block found in %s, skipping", brain.getPath())
             continue
 
         # Check if eea_latest_version block already exists
         has_latest_version = False
         for block_data in doc.blocks.values():
-            if (isinstance(block_data, dict) and
-                    block_data.get("@type") == "eea_latest_version"):
+            if (
+                isinstance(block_data, dict)
+                and block_data.get("@type") == "eea_latest_version"
+            ):
                 has_latest_version = True
                 break
 
         if has_latest_version:
             logger.info(
                 "eea_latest_version block already exists in %s, skipping",
-                brain.getPath()
+                brain.getPath(),
             )
             continue
 
@@ -90,7 +85,7 @@ def add_latest_version_block(context):
             "@layout": new_block_id,
             "@type": "eea_latest_version",
             "block": "b06ccfad-8f65-4bcc-a5bd-10647ade323e",
-            "results": True
+            "results": True,
         }
 
         # Add the new block to blocks
@@ -105,14 +100,12 @@ def add_latest_version_block(context):
                 # Insert after the title block
                 layout_items.insert(title_index + 1, new_block_id)
                 modified_count += 1
-                logger.info(
-                    "Added eea_latest_version block to %s",
-                    brain.getPath()
-                )
+                logger.info("Added eea_latest_version block to %s", brain.getPath())
             else:
                 logger.warning(
                     "Title block %s not found in blocks_layout for %s",
-                    title_block_id, brain.getPath()
+                    title_block_id,
+                    brain.getPath(),
                 )
                 # Remove the block we just added since we can't
                 # place it correctly
@@ -125,6 +118,6 @@ def add_latest_version_block(context):
 
     pghandler.finish()
     logger.info(
-        "Successfully added eea_latest_version block to %s web_report "
-        "objects", modified_count
+        "Successfully added eea_latest_version block to %s web_report objects",
+        modified_count,
     )
