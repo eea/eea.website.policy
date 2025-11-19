@@ -15,6 +15,7 @@
   <element value="Image"/>
   <element value="File"/>
   <element value="Document"/>
+  <element value="Folder"/>
  </property>
  <property name="allow_discussion">False</property>
  <property name="default_view">view</property>
