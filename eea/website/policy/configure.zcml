@@ -9,6 +9,9 @@
   <include package="eea.dexterity.indicators" />
   <include package="eea.dexterity.themes" />
   <include package="eea.progress.workflow" />
+  <include package="eea.progress.editing" />
+  <include package="eea.api.dataconnector" />
+  <include package="collective.volto.subsites" />
 
   <include file="profiles.zcml" />
   <include package=".behaviors" />
