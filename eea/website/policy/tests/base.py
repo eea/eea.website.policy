@@ -35,7 +35,7 @@ class EEAFixture(PloneSandboxLayer):
         setRoles(portal, TEST_USER_ID, ["Manager"])
 
         # Create testing environment
-        portal.invokeFactory("Folder", "sandbox", title="Sandbox")
+        portal.invokeFactory("Document", "sandbox", title="Sandbox")
 
     def tearDownZope(self, app):
         """Uninstall Zope"""
