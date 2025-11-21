@@ -1,6 +1,11 @@
 Changelog
 =========
 
+4.2 - (2025-11-21)
+---------------------------
+* Change: Fix jenkinsfile to use token
+  [valentinab25]
+
 4.1 - (2025-11-19)
 ---------------------------
 * Change: Replace Python linting to ruff
