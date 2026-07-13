@@ -1,6 +1,11 @@
 Changelog
 =========
 
+4.4 - (2026-07-13)
+---------------------------
+* Change: Add betterleaks action
+  [avoinea]
+
 4.3 - (2026-07-08)
 ---------------------------
 * Change: fix: SonarQube report - refs #305404
