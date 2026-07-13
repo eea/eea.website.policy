@@ -1,6 +1,11 @@
 Changelog
 =========
 
+4.3 - (2026-07-08)
+---------------------------
+* Change: fix: SonarQube report - refs #305404
+  [avoinea]
+
 4.2 - (2025-11-21)
 ---------------------------
 * Change: Fix jenkinsfile to use token
