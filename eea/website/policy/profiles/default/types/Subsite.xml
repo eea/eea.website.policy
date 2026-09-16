@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="Subsite" meta_type="Dexterity FTI">
+  <property name="behaviors" purge="false">
+    <element value="eea.subsite_logo_main" />
+  </property>
+</object>

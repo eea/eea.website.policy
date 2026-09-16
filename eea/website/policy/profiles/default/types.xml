@@ -5,4 +5,5 @@
   <object name="faq" meta_type="Dexterity FTI"/>
  <object name="landing_page" meta_type="Dexterity FTI"/>
  <object name="article" meta_type="Dexterity FTI"/>
+ <object name="Subsite" meta_type="Dexterity FTI"/>
 </object>

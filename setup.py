@@ -49,6 +49,7 @@ setup(
         "eea.progress.workflow",
         "eea.progress.editing",
         "eea.api.dataconnector",
+        "eea.volto.policy",
         "collective.volto.subsites",
     ],
     extras_require={
