@@ -255,4 +255,45 @@
    <property name="modal" type="string">{}</property>
   </object>
  </object>
+ <object name="context_navigation" meta_type="CMF Action Category">
+  <property name="title">Context navigation</property>
+  <object name="epanet_our_group" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Navigation</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:/en/epanet/our-group</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+   <property name="bottomLevel" type="int">4</property>
+   <property name="topLevel" type="int">0</property>
+   <property name="includeTop" type="boolean">True</property>
+   <property name="currentFolderOnly" type="boolean">False</property>
+   <property name="no_thumbs" type="boolean">True</property>
+   <property name="no_icons" type="boolean">True</property>
+  </object>
+  <object name="epanet_reports_letters" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Navigation</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:/en/epanet/reports-letters</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+   <property name="bottomLevel" type="int">4</property>
+   <property name="topLevel" type="int">0</property>
+   <property name="includeTop" type="boolean">True</property>
+   <property name="currentFolderOnly" type="boolean">False</property>
+   <property name="no_thumbs" type="boolean">True</property>
+   <property name="no_icons" type="boolean">True</property>
+  </object>
+ </object>
 </object>

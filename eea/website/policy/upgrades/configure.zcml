@@ -4,6 +4,18 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="5.0"
+    destination="5.1"
+    profile="eea.website.policy:default">
+
+    <genericsetup:upgradeStep
+      title="Add EPANET context navigation actions"
+      handler="eea.website.policy.upgrades.evolve51.add_epanet_context_navigation_actions"
+      />
+
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="4.0"
     destination="5.0"
     profile="eea.website.policy:default">
