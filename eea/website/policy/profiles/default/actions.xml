@@ -263,6 +263,12 @@
    <property name="visible">True</property>
    <property name="bottomLevel" type="int">4</property>
    <property name="topLevel" type="int">0</property>
+   <property name="portal_type" type="lines">
+    <element value="Document"/>
+    <element value="Folder"/>
+    <element value="News Item"/>
+    <element value="Link"/>
+   </property>
    <property name="permissions">
     <element value="View"/>
    </property>
@@ -273,6 +279,12 @@
    <property name="visible">True</property>
    <property name="bottomLevel" type="int">4</property>
    <property name="topLevel" type="int">0</property>
+   <property name="portal_type" type="lines">
+    <element value="Document"/>
+    <element value="Folder"/>
+    <element value="News Item"/>
+    <element value="Link"/>
+   </property>
    <property name="permissions">
     <element value="View"/>
    </property>
