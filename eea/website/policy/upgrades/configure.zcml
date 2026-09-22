@@ -8,9 +8,10 @@
     destination="5.1"
     profile="eea.website.policy:default">
 
-    <genericsetup:upgradeStep
+    <genericsetup:upgradeDepends
       title="Add EPANET context navigation actions"
-      handler="eea.website.policy.upgrades.evolve51.add_epanet_context_navigation_actions"
+      import_profile="eea.website.policy:to_51"
+      import_steps="actions"
       />
 
   </genericsetup:upgradeSteps>
