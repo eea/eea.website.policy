@@ -269,6 +269,8 @@
     <element value="News Item"/>
     <element value="Link"/>
    </property>
+   <property name="sort_on" type="string">sortable_title</property>
+   <property name="sort_order" type="string">ascending</property>
    <property name="permissions">
     <element value="View"/>
    </property>
@@ -285,6 +287,8 @@
     <element value="News Item"/>
     <element value="Link"/>
    </property>
+   <property name="sort_on" type="string">sortable_title</property>
+   <property name="sort_order" type="string">ascending</property>
    <property name="permissions">
     <element value="View"/>
    </property>
