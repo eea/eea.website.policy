@@ -39,4 +39,12 @@
       />
 
 
+
+  <genericsetup:registerProfile
+      name="to_51"
+      title="eea.website.policy (upgrade to 5.1)"
+      directory="profiles/to_51"
+      description="Adds EPANET context_navigation actions."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
 </configure>
