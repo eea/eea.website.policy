@@ -1,6 +1,10 @@
 Changelog
 =========
 
+4.6 - (2026-09-30)
+---------------------------
+* Change: Remove epanet_our_group action and introduce children_sort_on fields
+  [nileshgulia1]
 4.5 - (2026-09-21)
 ---------------------------
 * Change: Add context_navigation actions for Epanet Subsite
