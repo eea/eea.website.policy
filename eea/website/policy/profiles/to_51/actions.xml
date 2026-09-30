@@ -3,24 +3,7 @@
  xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <object name="context_navigation" meta_type="CMF Action Category">
   <property name="title">Context navigation</property>
-  <object name="epanet_our_group" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title" i18n:translate="">Navigation</property>
-   <property name="url_expr">string:/en/epanet/our-group</property>
-   <property name="visible">True</property>
-   <property name="bottomLevel" type="int">4</property>
-   <property name="topLevel" type="int">0</property>
-   <property name="portal_type" type="lines">
-    <element value="Document"/>
-    <element value="Folder"/>
-    <element value="News Item"/>
-    <element value="Link"/>
-   </property>
-   <property name="sort_on" type="string">sortable_title</property>
-   <property name="sort_order" type="string">ascending</property>
-   <property name="permissions">
-    <element value="View"/>
-   </property>
-  </object>
+  <object name="epanet_our_group" remove="True"/>
   <object name="epanet_reports_letters" meta_type="CMF Action" i18n:domain="plone">
    <property name="title" i18n:translate="">Navigation</property>
    <property name="url_expr">string:/en/epanet/reports-letters</property>
@@ -33,7 +16,12 @@
     <element value="News Item"/>
     <element value="Link"/>
    </property>
-   <property name="sort_on" type="string">sortable_title</property>
+   <property name="sort_on" type="string">getObjPositionInParent</property>
+   <property name="children_sort_type" type="lines">
+    <element value="News Item"/>
+   </property>
+   <property name="children_sort_on" type="string">effective</property>
+   <property name="children_sort_order" type="string">descending</property>
    <property name="sort_order" type="string">ascending</property>
    <property name="permissions">
     <element value="View"/>
